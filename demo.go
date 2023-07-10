@@ -142,10 +142,16 @@ func main() {
 	// tạo error
 	//myErr := &MyError{}
 	myErr := errors.New("something unexpected happened")
+	var err interface{}
 	// in ra thông báo lỗi
 	fmt.Println(myErr)
 	fmt.Printf("Type of myErr is %T \n", myErr)
 	fmt.Printf("Value of myErr is %#v \n", myErr)
+	err = "hello"
+	fmt.Println(err)
+	check, ok := err.(int)
+	fmt.Println("check---", check)
+	fmt.Println("ok---", ok)
 }
 
 type MyError struct{}
